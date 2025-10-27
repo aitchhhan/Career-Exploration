@@ -44,6 +44,10 @@ dependencies {
 	// Redis
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'org.apache.commons:commons-pool2' // 커넥션 풀
+
+	// AWS SDK
+	implementation 'software.amazon.awssdk:s3:2.36.2'
+	implementation 'software.amazon.awssdk:apache-client:2.36.2'
 }
 
 tasks.named('test') {

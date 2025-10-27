@@ -28,4 +28,15 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> InvalidJwt(InvalidJwtException e) {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
     }
+
+    // S3
+    @ExceptionHandler(S3PresignedException.class)
+    public ResponseEntity<String> s3Presigned(S3PresignedException e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+    }
+
+    @ExceptionHandler(NotAllowedFileTypeException.class)
+    public ResponseEntity<String> notAllowedFileType(NotAllowedFileTypeException e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("허용되지 않은 MIME 타입입니다.");
+    }
 }
