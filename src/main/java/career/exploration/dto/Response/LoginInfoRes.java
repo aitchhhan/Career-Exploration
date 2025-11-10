@@ -1,4 +1,4 @@
-package career.exploration.dto;
+package career.exploration.dto.Response;
 
 
 import career.exploration.enums.RoleType;

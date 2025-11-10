@@ -18,6 +18,11 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
     }
 
+    @ExceptionHandler(InvalidIdException.class)
+    public ResponseEntity<String> invalidId(InvalidIdException e) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage() + "Id로 조회한 결과 없음");
+    }
+
     // Jwt
     @ExceptionHandler(HandleJwtException.class)
     public ResponseEntity<String> handleJwt(HandleJwtException e) {

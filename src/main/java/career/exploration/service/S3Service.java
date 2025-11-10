@@ -1,8 +1,8 @@
 package career.exploration.service;
 
 
-import career.exploration.dto.PresignedUrlRes;
-import career.exploration.dto.ReqPresignedUrl;
+import career.exploration.dto.Response.PresignedUrlRes;
+import career.exploration.dto.Request.ReqPresignedUrl;
 import career.exploration.enums.AllowedFileType;
 import career.exploration.exception.NotAllowedFileTypeException;
 import career.exploration.exception.S3PresignedException;

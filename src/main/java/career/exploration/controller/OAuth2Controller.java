@@ -1,7 +1,7 @@
 package career.exploration.controller;
 
 
-import career.exploration.dto.LoginInfoRes;
+import career.exploration.dto.Response.LoginInfoRes;
 import career.exploration.service.OAuth2Service;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

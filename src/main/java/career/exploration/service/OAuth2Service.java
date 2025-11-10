@@ -1,11 +1,10 @@
 package career.exploration.service;
 
 import career.exploration.domain.Member;
-import career.exploration.dto.LoginInfoRes;
+import career.exploration.dto.Response.LoginInfoRes;
 import career.exploration.exception.EmptyMemberException;
 import career.exploration.exception.InvalidLoginlException;
 import career.exploration.repository.MemberRepository;
-import career.exploration.security.JwtUtility;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -16,8 +15,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 
 @Service
 @RequiredArgsConstructor

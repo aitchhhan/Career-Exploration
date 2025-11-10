@@ -1,4 +1,4 @@
-package career.exploration.dto;
+package career.exploration.dto.Request;
 
 public record ReqPresignedUrl(String fileName, String mimetype) {
 }
