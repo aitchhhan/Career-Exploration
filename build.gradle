@@ -41,6 +41,12 @@ dependencies {
 	implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
 	implementation 'io.jsonwebtoken:jjwt-impl:0.12.6'
 
+	// Google Cloud AI Gemini
+	implementation 'com.google.cloud:google-cloud-aiplatform:3.79.0'
+	implementation 'com.google.cloud:google-cloud-core:2.58.2'
+	implementation 'com.google.code.gson:gson:2.13.2'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
 	// Redis
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'org.apache.commons:commons-pool2' // 커넥션 풀

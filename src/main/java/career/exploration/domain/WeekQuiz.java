@@ -26,5 +26,14 @@ public class WeekQuiz {
     private LocalDateTime createDate;
 
     private LocalDateTime updateDate;
+
+    public WeekQuiz(String title) {
+        this.title = title;
+        this.title = title;
+    }
+
+    public void update(String title) {
+        this.title = title;
+    }
 }
 

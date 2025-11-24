@@ -13,8 +13,8 @@ public class RedisConfig {
 
     @Bean
     public RedisConnectionFactory redisConnectionFactory(
-            @Value("${spring.data.redis.host}") String host, // application.yml에 있는 값을 주입 받아 Redis의 호스트와 포트 번호를 주입
-            @Value("${spring.data.redis.port}") int port) {
+            @Value("${data.redis.host}") String host, // application.yml에 있는 값을 주입 받아 Redis의 호스트와 포트 번호를 주입
+            @Value("${data.redis.port}") int port) {
         return new LettuceConnectionFactory(host, port); // LettuceConnectionFactory -> Redis와 연결하는 커넥션 팩토리
     }
 

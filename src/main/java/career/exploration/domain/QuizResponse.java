@@ -3,10 +3,7 @@ package career.exploration.domain;
 import career.exploration.enums.AnswerStatus;
 import career.exploration.enums.QuizType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -14,6 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
 @Builder
 public class QuizResponse {
 
@@ -40,5 +38,12 @@ public class QuizResponse {
     private QuizType quizType;
 
     private int count;
+
+    public QuizResponse(Member member, Quiz quiz, String userAnswer, QuizType quizType) {
+        this.member = member;
+        this.quiz = quiz;
+        this.answer = userAnswer;
+        this.quizType = quizType;
+    }
 }
 

@@ -1,12 +1,10 @@
 package career.exploration.service;
 
 
-
 import career.exploration.domain.JoinLectureFile;
 import career.exploration.domain.Lecture;
 import career.exploration.dto.Request.ReqCreateLecture;
 import career.exploration.dto.Request.ReqUpdateLecture;
-import career.exploration.dto.Request.ReqUpdateLectureFile;
 import career.exploration.repository.JoinLectureFilesRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

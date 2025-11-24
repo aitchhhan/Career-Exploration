@@ -21,5 +21,10 @@ public class AnswerChoice {
     private Quiz quiz;
 
     private String content;
+
+    public AnswerChoice(Quiz newQuiz, String choice) {
+        this.quiz = newQuiz;
+        this.content = choice;
+    }
 }
 

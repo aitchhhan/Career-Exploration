@@ -2,16 +2,14 @@ package career.exploration.domain;
 
 import career.exploration.enums.QuizType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Setter
 public class Quiz {
 
     @Id
@@ -29,5 +27,13 @@ public class Quiz {
 
     @Enumerated(EnumType.STRING)
     private QuizType quizType;
+
+    public Quiz(WeekQuiz weekQuiz, String content, String explanation, String answer, QuizType quizType) {
+        this.weekQuiz = weekQuiz;
+        this.content = content;
+        this.explanation = explanation;
+        this.answer = answer;
+        this.quizType = quizType;
+    }
 }
 
