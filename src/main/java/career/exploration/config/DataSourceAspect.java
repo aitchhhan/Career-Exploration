@@ -13,9 +13,9 @@ public class DataSourceAspect {
     @Before("@annotation(transactional)")
     public void switchDataSource(Transactional transactional) {
         if (transactional.readOnly()) {
-            ReplicationRoutingDataSource.setReader(); // Reader DB 선택 (Round-Robin)
+            ReplicationRoutingDataSource.setReader();
         } else {
-            ReplicationRoutingDataSource.setWriter(); // Writer DB 선택
+            ReplicationRoutingDataSource.setWriter();
         }
     }
 

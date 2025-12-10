@@ -21,7 +21,7 @@ public class ReplicationRoutingDataSource extends AbstractRoutingDataSource {
 
     public static void setReader() {
         if (readDataSources == null || readDataSources.isEmpty()) {
-            throw new IllegalStateException("Reader DataSources are not configured.");
+            throw new IllegalStateException("Reader DataSource가 구성되지 않음");
         }
         int index = Math.abs(counter.getAndIncrement() % readDataSources.size());
         contextHolder.set(readDataSources.get(index));

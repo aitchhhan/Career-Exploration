@@ -53,7 +53,6 @@ public class RoutingDataSourceConfig {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
 
-        // Hibernate 속성 강제 지정
         Map<String, Object> props = new HashMap<>();
         props.put("hibernate.dialect", "org.hibernate.dialect.MySQL8Dialect");
         props.put("hibernate.show_sql", true);
